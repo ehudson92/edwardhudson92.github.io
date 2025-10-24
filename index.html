@@ -5,59 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edward Hudson Jr | Cybersecurity & IT Professional</title>
   <style>
-    /* 🌙 Dark Mode & Responsive Design */
+    /* Root Colors */
     :root {
       --bg-color: #f4f4f4;
       --text-color: #0a192f;
       --card-bg: #ffffff;
       --link-color: #0078d7;
+      --header-bg: #0a192f;
+      --header-text: #ffffff;
+    }
+    body.dark {
+      --bg-color: #0a192f;
+      --text-color: #f4f4f4;
+      --card-bg: #112240;
+      --link-color: #64ffda;
+      --header-bg: #0f1c3f;
+      --header-text: #f4f4f4;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-color: #0a192f;
-        --text-color: #f4f4f4;
-        --card-bg: #112240;
-        --link-color: #64ffda;
-      }
-    }
-
+    /* Global Styles */
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      margin: 0;
-      padding: 0;
       line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
+    a { color: var(--link-color); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
 
     header {
-      background-color: var(--card-bg);
-      padding: 2em;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { font-size: 1.5em; }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--header-text);
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+    }
+    nav ul li { margin: 0; }
+    nav ul li a { color: var(--header-text); }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; }
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--header-bg);
+        width: 200px;
+        display: none;
+        padding: 1em;
+        border-radius: 0 0 8px 8px;
+      }
+      nav ul.show { display: flex; }
     }
 
-    h1 {
-      margin-bottom: 0.3em;
-      color: var(--link-color);
-    }
-
+    /* Sections */
     section {
       max-width: 900px;
       margin: 2em auto;
       background-color: var(--card-bg);
       border-radius: 10px;
       padding: 2em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
     }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    a:hover { text-decoration: underline; }
+    section.visible { opacity: 1; transform: translateY(0); }
 
     footer {
       text-align: center;
@@ -66,33 +107,44 @@
       color: #888;
     }
 
-    /* 📱 Responsive Layout */
-    @media (max-width: 600px) {
-      header, section { padding: 1.2em; }
-      h1 { font-size: 1.8em; }
-    }
+    /* GitHub Stats */
+    .github-stats { text-align: center; margin-top: 1em; }
+    .github-stats img { border-radius: 8px; max-width: 100%; margin: 0.5em; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
 
-    /* GitHub Cards Layout */
-    .github-stats {
-      text-align: center;
-      margin-top: 1.5em;
-    }
-    .github-stats img {
-      border-radius: 8px;
-      max-width: 100%;
-      height: auto;
-      margin: 0.5em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    /* Dark/Light toggle button */
+    #theme-toggle {
+      padding: 0.4em 0.8em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: var(--link-color);
+      color: var(--card-bg);
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Edward Hudson Jr</h1>
-    <p>Cybersecurity Professional | SOC Analyst | Developer</p>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#certs">Certifications</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Dark Mode</button>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I’m a cybersecurity professional passionate about defensive operations, automation, 
@@ -100,7 +152,7 @@
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li><a href="https://github.com/EdwardHudson/CyberLab-Automation" target="_blank">CyberLab Automation Tool</a> – PowerShell automation for SOC analysts</li>
@@ -109,7 +161,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="github">
     <h2>GitHub Activity</h2>
     <div class="github-stats">
       <img src="https://github-readme-stats.vercel.app/api?username=EdwardHudson&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
@@ -117,12 +169,12 @@
     </div>
   </section>
 
-  <section>
+  <section id="certs">
     <h2>Certifications</h2>
     <p>CompTIA Security+ | AWS Cloud Practitioner | Microsoft Certified: Security Fundamentals</p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Connect With Me</h2>
     <ul>
       <li><a href="https://linkedin.com/in/edwardhudson" target="_blank">LinkedIn</a></li>
@@ -132,7 +184,34 @@
   </section>
 
   <footer>
-    <p>© 2025 Edward Hudson Jr | Built with 💙 using GitHub Pages</p>
+    <p>© 2025 Edward Hudson | Built with 💙 using GitHub Pages</p>
   </footer>
+
+  <script>
+    // Scroll animations
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Dark/Light Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      themeBtn.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
 </body>
 </html>
