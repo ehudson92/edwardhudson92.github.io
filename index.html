@@ -1,217 +1,183 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+    Strata by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edward Hudson Jr | Cybersecurity & IT Professional</title>
-  <style>
-    /* Root Colors */
-    :root {
-      --bg-color: #f4f4f4;
-      --text-color: #0a192f;
-      --card-bg: #ffffff;
-      --link-color: #0078d7;
-      --header-bg: #0a192f;
-      --header-text: #ffffff;
-    }
-    body.dark {
-      --bg-color: #0a192f;
-      --text-color: #f4f4f4;
-      --card-bg: #112240;
-      --link-color: #64ffda;
-      --header-bg: #0f1c3f;
-      --header-text: #f4f4f4;
-    }
-
-    /* Global Styles */
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-    }
-    a { color: var(--link-color); text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      background-color: var(--header-bg);
-      color: var(--header-text);
-      padding: 1em 2em;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 { font-size: 1.5em; }
-
-    /* Hamburger Menu */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: var(--header-text);
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1em;
-    }
-    nav ul li { margin: 0; }
-    nav ul li a { color: var(--header-text); }
-
-    /* Responsive Menu */
-    @media (max-width: 768px) {
-      .menu-toggle { display: flex; }
-      nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: var(--header-bg);
-        width: 200px;
-        display: none;
-        padding: 1em;
-        border-radius: 0 0 8px 8px;
-      }
-      nav ul.show { display: flex; }
-    }
-
-    /* Sections */
-    section {
-      max-width: 900px;
-      margin: 2em auto;
-      background-color: var(--card-bg);
-      border-radius: 10px;
-      padding: 2em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
-    }
-    section.visible { opacity: 1; transform: translateY(0); }
-
-    footer {
-      text-align: center;
-      padding: 2em;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    /* GitHub Stats */
-    .github-stats { text-align: center; margin-top: 1em; }
-    .github-stats img { border-radius: 8px; max-width: 100%; margin: 0.5em; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-
-    /* Dark/Light toggle button */
-    #theme-toggle {
-      padding: 0.4em 0.8em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background: var(--link-color);
-      color: var(--card-bg);
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Edward Hudson Jr</h1>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
-      <ul id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#github">GitHub</a></li>
-        <li><a href="#certs">Certifications</a></li>
-        <li><a href="#contact">Connect</a></li>
-      </ul>
-    </nav>
-    <button id="theme-toggle">Dark Mode</button>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a cybersecurity professional passionate about defensive operations, automation, 
-      and secure system deployment. My mission is to build, defend, and innovate through technology.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/EdwardHudson/CyberLab-Automation" target="_blank">CyberLab Automation Tool</a> – PowerShell automation for SOC analysts</li>
-      <li><a href="https://github.com/EdwardHudson/SecureWeb-App" target="_blank">Secure Web App</a> – Web app with secure authentication and SQL defense</li>
-      <li><a href="https://tryhackme.com/p/EdwardHudson" target="_blank">TryHackMe Labs</a> – Active cybersecurity skill practice</li>
-    </ul>
-  </section>
-
-  <section id="github">
-    <h2>GitHub Activity</h2>
-    <div class="github-stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=EdwardHudson&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EdwardHudson&layout=compact&theme=tokyonight" alt="Top Languages" />
-    </div>
-  </section>
-
-  <section id="certs">
-    <h2>Certifications</h2>
-    <p>CompTIA Security+ | AWS Cloud Practitioner | Microsoft Certified: Security Fundamentals</p>
-  </section>
-
-  <section id="contact">
-    <h2>Connect With Me</h2>
-    <ul>
-      <li><a href="https://linkedin.com/in/edwardhudson" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/EdwardHudson" target="_blank">GitHub</a></li>
-      <li><a href="mailto:edward@example.com">Email Me</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Edward Hudson Jr | Built with 💙 using GitHub Pages</p>
-  </footer>
-
-  <script>
-    // Scroll animations
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
+    <title>Edward Hudson Jr. - Cybersecurity Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Dark/Light Mode Styles */
+        body.dark { background: #121212; color: #e0e0e0; }
+        body.dark a { color: #bb86fc; }
+        .theme-toggle { position: fixed; top: 1rem; right: 1rem; cursor: pointer; font-size: 1.5rem; z-index: 1000; }
+        /* Hamburger menu style for mobile */
+        #navToggle { display: none; cursor: pointer; font-size: 2rem; }
+        @media screen and (max-width: 768px) {
+            #nav { display: none; position: absolute; top: 60px; right: 0; background: #fff; width: 200px; padding: 1rem; }
+            body.dark #nav { background: #222; }
+            #nav.show { display: block; }
         }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
+    </style>
+</head>
+<body class="is-preload">
+
+<!-- Theme Toggle -->
+<div class="theme-toggle" id="themeToggle">🌙</div>
+
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Edward Hudson Jr." /></a>
+        <h1 data-aos="fade-up" data-aos-duration="1000">
+            Edward Hudson Jr.<br />
+            Cybersecurity & IT Professional
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1200">
+            TSTC Cybersecurity Graduate | SOC & Security Awareness Projects | Hands-on Labs
+        </p>
+
+        <!-- Hamburger Menu -->
+        <div id="navToggle">☰</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one">About</a></li>
+                <li><a href="#two">Projects</a></li>
+                <li><a href="#three">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- About Section -->
+    <section id="one" data-aos="fade-up" data-aos-duration="1000">
+        <header class="major">
+            <h2>About Me</h2>
+        </header>
+        <p>
+            I am a TSTC-certified Cybersecurity & IT professional with hands-on experience in Security Operations Center (SOC) labs, 
+            phishing simulations, and threat monitoring. Passionate about protecting digital assets and building secure systems.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="two" data-aos="fade-up" data-aos-duration="1200">
+        <header class="major">
+            <h2>Projects</h2>
+        </header>
+        <div class="row">
+            <article class="col-6 col-12-xsmall work-item" data-aos="zoom-in" data-aos-duration="800">
+                <h3>SOC Lab Simulation</h3>
+                <p>Hands-on lab for monitoring and responding to security alerts, practicing real-world SOC operations.</p>
+            </article>
+            <article class="col-6 col-12-xsmall work-item" data-aos="zoom-in" data-aos-duration="800">
+                <h3>Phishing Awareness Campaign</h3>
+                <p>Designed and executed simulated phishing campaigns to train employees and measure security awareness.</p>
+            </article>
+            <article class="col-6 col-12-xsmall work-item" data-aos="zoom-in" data-aos-duration="800">
+                <h3>GitHub Portfolio</h3>
+                <p>Showcases personal projects and labs demonstrating programming, scripting, and cybersecurity skills.</p>
+            </article>
+            <article class="col-6 col-12-xsmall work-item" data-aos="zoom-in" data-aos-duration="800">
+                <h3>Security Monitoring Tools</h3>
+                <p>Experience using alert monitoring and incident response tools to identify and mitigate threats.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="three" data-aos="fade-up" data-aos-duration="1400">
+        <header class="major">
+            <h2>Get In Touch</h2>
+        </header>
+        <p>Feel free to connect with me through LinkedIn, GitHub, or send a message directly via the form below.</p>
+        <div class="row">
+            <div class="col-8 col-12-small">
+                <form method="post" action="#">
+                    <div class="row gtr-uniform gtr-50">
+                        <div class="col-6 col-12-xsmall"><input type="text" name="name" placeholder="Name" /></div>
+                        <div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Email" /></div>
+                        <div class="col-12"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" /></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="col-4 col-12-small">
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+                        Houston, TX, USA
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                        832-260-3252
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                        <a href="mailto:edward.cybersec@proton.me">edward.cybersec@proton.me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/edwardhudsonjrofficial" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/ehudson92" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Edward Hudson Jr.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    // Dark/Light Theme Toggle
+    const toggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') document.body.classList.add('dark');
+
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        toggle.textContent = document.body.classList.contains('dark') ? '🌙' : '☀️';
+    });
 
     // Hamburger menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('nav');
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
     });
-
-    // Dark/Light Theme toggle
-    const themeBtn = document.getElementById('theme-toggle');
-    themeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      themeBtn.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-    });
-  </script>
+</script>
 </body>
 </html>
