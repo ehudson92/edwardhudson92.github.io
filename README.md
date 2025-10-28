@@ -71,15 +71,3 @@ Each project reflects hands-on skills in **defensive cybersecurity, Python scrip
 ## 🧾 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## ✨ Acknowledgment
-
-Built using the **HTML5 UP "Strata" template**, customized with interactive elements and responsive enhancements.
-
----
-
-## 🧭 Tagline
-
-> “Cybersecurity & IT grad | Network security, ethical hacking, and vulnerability management enthusiast | Lifelong learner. 🔒 Protecting systems, one line of code at a time.”
