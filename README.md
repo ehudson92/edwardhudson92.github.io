@@ -65,9 +65,3 @@ Each project reflects hands-on skills in **defensive cybersecurity, Python scrip
 
 - **LinkedIn:** [www.linkedin.com/in/edwardhudsonjrofficial](https://www.linkedin.com/in/edwardhudsonjrofficial)  
 - **GitHub:** [https://github.com/ehudson92](https://github.com/ehudson92)
-
----
-
-## 🧾 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
