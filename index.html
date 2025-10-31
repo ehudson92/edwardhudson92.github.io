@@ -90,25 +90,58 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="three" data-aos="fade-up" data-aos-duration="1400">
-        <header class="major">
-            <h2>Get In Touch</h2>
-        </header>
-        <p>Feel free to connect with me through LinkedIn, GitHub, or send a message directly via the form below.</p>
-        <div class="row">
-            <div class="col-8 col-12-small">
-                <form method="post" action="#">
-                    <div class="row gtr-uniform gtr-50">
-                        <div class="col-6 col-12-xsmall"><input type="text" name="name" placeholder="Name" /></div>
-                        <div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Email" /></div>
-                        <div class="col-12"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
+<!-- Contact Section -->
+<section id="three" data-aos="fade-up" data-aos-duration="1400">
+    <header class="major">
+        <h2>Get In Touch</h2>
+    </header>
+    <p>Feel free to connect with me through LinkedIn, GitHub, or send a message directly via the form below.</p>
+
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-8 col-12-small">
+            <form method="POST" action="https://formspree.io/f/mvgvwgvd">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="name" placeholder="Name" required />
                     </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" /></li>
-                    </ul>
-                </form>
-            </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Optional: redirect to a thank-you page after submission -->
+                <input type="hidden" name="_next" value="https://ehudson92.github.io/thank-you.html">
+
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" /></li>
+                </ul>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-4 col-12-small">
+            <ul class="labeled-icons">
+                <li>
+                    <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+                    Houston, TX, USA
+                </li>
+                <li>
+                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                    832-260-3252
+                </li>
+                <li>
+                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                    <a href="mailto:edward.cybersec@proton.me">edward.cybersec@proton.me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
             <div class="col-4 col-12-small">
                 <ul class="labeled-icons">
                     <li>
