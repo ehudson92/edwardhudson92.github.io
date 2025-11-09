@@ -19,7 +19,7 @@ Developed with **HTML5, CSS3, and JavaScript**, the site emphasizes responsive d
 ## 🧠 About Me
 
 I’m **Edward Hudson Jr.**, a **Cybersecurity & Information Technology graduate** from **Texas State Technical College (TSTC)**.  
-My focus areas include **network security**, **vulnerability management**, and **ethical hacking** — driven by curiosity, problem-solving, and continuous learning.
+My focus areas include **network security**, **vulnerability management**, and **ethical hacking** — driven by curiosity, problem-solving, and continuous learning!
 
 ---
 
@@ -52,11 +52,13 @@ My focus areas include **network security**, **vulnerability management**, and *
 
 ## 💼 Featured Projects
 
-- 🔐 **Password Strength Checker** — Python-based password analysis tool.  
-- 🛰️ **Port Scanner** — Lightweight cybersecurity tool for ethical testing.  
+- 🔐 **Password Strength Checker** — Python-based password analysis tool.
+- :old_key: **Encryption / Decryption App** - Designed for encrypting and decrypting files using **AES** and **RSA** algorithms  
+- 🛰️ **Port Scanner** — Lightweight cybersecurity tool for ethical testing.
+- :mailbox: **File Integrity Monitor** -A Python-based File Integrity Monitor that detects unauthorized file changes using cryptographic hashes.
 - 🧾 **Personal Portfolio Website** — This very site!  
 
-Each project reflects hands-on skills in **defensive cybersecurity, Python scripting, and IT fundamentals**.
+Each project reflects hands-on skills in **defensive cybersecurity, Python scripting, and Networking Security  fundamentals**.
 
 ---
 
