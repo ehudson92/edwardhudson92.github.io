@@ -1,0 +1,19 @@
+.cert-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    background: #f7f9fc;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.cert-card a {
+    text-decoration: none;
+    color: #2A73CC;
+    font-weight: 600;
+}
