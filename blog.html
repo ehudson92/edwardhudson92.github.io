@@ -35,6 +35,18 @@
         </a>
         <h1>Blog • Insights & Journey</h1>
         <p>Cybersecurity • Personal Growth • Technical Projects</p>
+        
+        <!-- Hamburger Menu -->
+        <div id="navToggle">☰</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one">About</a></li>
+                <li><a href="#two">Projects</a></li>
+                <li><a href="#three">Certifications</a></li>
+                <li><a href="#four">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -74,9 +86,33 @@
     </div>
 </footer>
 
+<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
 
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    // Dark/Light Theme Toggle
+    const toggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') document.body.classList.add('dark');
+
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        toggle.textContent = document.body.classList.contains('dark') ? '🌙' : '☀️';
+    });
+
+    // Hamburger menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('nav');
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+</script>
 </body>
 </html>
