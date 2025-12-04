@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Dark/Light Mode Styles */
+        body.dark { background: #121212; color: #e0e0e0; }
+        body.dark a { color: #bb86fc; }
+        .theme-toggle { position: fixed; top: 1rem; right: 1rem; cursor: pointer; font-size: 1.5rem; z-index: 1000; }
+        /* Hamburger menu style for mobile */
+        #navToggle { display: none; cursor: pointer; font-size: 2rem; }
+        @media screen and (max-width: 768px) {
+            #nav { display: none; position: absolute; top: 60px; right: 0; background: #fff; width: 200px; padding: 1rem; }
+            body.dark #nav { background: #222; }
+            #nav.show { display: block; }
+        }
+    </style>
 </head>
-
 <body class="is-preload">
+
+<!-- Theme Toggle -->
+<div class="theme-toggle" id="themeToggle">🌙</div>
 
 <header id="header">
     <div class="inner">
